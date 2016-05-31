@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Draw Text to a Canvas</title>
+</head>
+<body>
+<canvas id="myCanvas" width="250" height="200" style="border: 1px solid blue;">
+    Your browser does not support the HTML5 canvas tag.
+</canvas>
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.font = "40px Arial";
+    ctx.fillStyle = 'red';
+    ctx.fillText("Hello World", 10, 50);
+    ctx.strokeStyle = 'red';
+    ctx.strokeText("Hello World", 10, 150);
+</script>
+</body>
+</html>

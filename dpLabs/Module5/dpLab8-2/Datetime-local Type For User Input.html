@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First jQuery Web Page</title>
+    <script src="../../jquery-2.2.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).hide();
+            });
+        });
+    </script>
+</head>
+<body>
+<p>If you click on me, I will be gone!</p>
+<p>If you click on me, I will be away!</p>
+<p>If you click on me, I don't know what will happen!</p>
+</body>
+</html>
