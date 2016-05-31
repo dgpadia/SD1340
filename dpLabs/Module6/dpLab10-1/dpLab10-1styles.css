@@ -1,0 +1,9 @@
+[rel=prev] {
+    background-color: navy;
+    color:white;
+}
+
+[rel=next] {
+    background-color: maroon;
+    color: white;
+}

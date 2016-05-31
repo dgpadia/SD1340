@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Lucky Day</title>
+    <script language="JavaScript" type="text/javascript">
+        <!--
+        function getLuckyInfo() {
+            //Create an array with 7 colors
+            var colors = ['lightpink', 'orange', 'yellow', 'lightgreen', 'lightblue', 'violet', 'white']
+            //Create an array with the days of the week
+            var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+            //Calculate a random number between 0 and the number of elements in the colors array
+            var i = Math.floor(Math.random() * colors.length);
+            //Calculate a random number between 0 and the number of elements in the days array
+            var x = Math.floor(Math.random() * days.length);
+            //Show the color name and background it with said color
+            document.write("<p style='background-color: " + colors[i] + "'>Your lucky color is " + colors[i] + "</p>");
+            //Show the day of the week
+            document.write("<p>Your lucky day is " + days[x] + "</p>")
+        }
+        //-->
+    </script>
+</head>
+<body>
+<div id="luckyinfo">
+    <script language="JavaScript" type="text/javascript">
+        <!--
+        getLuckyInfo();
+        //-->
+    </script>
+    <a href="#" onmouseover="alert('Not a chance!');">Change your luck</a>
+</div>
+</body>
+</html>

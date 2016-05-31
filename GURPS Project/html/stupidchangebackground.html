@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stupid Change Background</title>
+    <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+    <script src="../js/jquery-1.12.3.min.js"></script>
+    <script src=../js/main.js></script>
+</head>
+<body>
+<header></header>
+<nav></nav>
+<article>
+    <section>
+        <h1>Background color change!!</h1>
+        <p>Why would you ever want to change the background color with a button in javascript in a registration form? Who cares! I need an
+            "A"!!!</p>
+        <form name="stupidChangeBackground">
+            <fieldset>
+                <button type="button" onclick="stupidColorChange('red')">Change background color to RED!!!!</button>
+                <button type="button" onclick="stupidColorChange('blue')">Change background color to BLUE!!!</button>
+                <button type="button" onclick="stupidColorChange('#1E261F')">It's stupid right? Reset it here.</button>
+            </fieldset>
+        </form>
+    </section>
+</article>
+<script>
+    function stupidColorChange(color) {
+        document.body.style.backgroundColor = color;
+    }
+</script>
+</body>
+</html>

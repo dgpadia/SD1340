@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Over and Mouse Out Event</title>
+    <script>
+        function secondImg(x) {
+            x.src="benji_animated_walk_by_avanii.gif";
+        }
+
+        function firstImg(x) {
+            x.src="mouse-hole.gif";
+        }
+    </script>
+</head>
+<body>
+<img onmouseover="secondImg(this)" onmouseout="firstImg(this)" border="0" src="mouse-hole.gif">
+<p>The function secondImg() is triggered when the user moves the mouse poitner over the image.</p>
+<p>The function firstImg() is triggered when the mouse pointer is moved out of the image.</p>
+</body>
+</html>

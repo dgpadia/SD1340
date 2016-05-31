@@ -1,0 +1,38 @@
+#header {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 800px;
+    background-color: cyan;
+}
+#footer {
+    position: absolute;
+    left: 0px;
+    top: 1700px;
+    width: 800px;
+    background-color: cyan;
+}
+#leftbar {
+    position: absolute;
+    left: 0px;
+    top: 140px;
+    width: 200px;
+    height: 150px;
+    background-color: yellow;
+}
+#content {
+    position: absolute;
+    left: 200px;
+    top: 140px;
+    width: 300px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#rightbar {
+    position: absolute;
+    left: 600px;
+    top: 140px;
+    width: 200px;
+    height: 1500px;
+    background: red;
+}

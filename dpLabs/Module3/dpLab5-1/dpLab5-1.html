@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Scheduler</title>
+    <script>
+
+        // I can't get this to work, and I don't know what's wrong. Google says not to use "with" anymore, as it
+        // causes confusing bugs. I did exactly as the textbook asks (aside from correcting simple mistakes, like
+        // no space after "function"), but I don't know how to debug this.
+
+        function ScheduledEvent(evtdate, evttitle, maxattendees, coordinator, phonenum, email, infoURL) {
+            this.evtdate = evtdate;
+            this.evttitle = evttitle;
+            this.maxattendees = maxattendees;
+            this.coordinator = coordinator;
+            this.phonenum = phonenum;
+            this.email = email;
+            this.infoURL = infoURL;
+        }
+
+        function PrintEvent() {
+            document.write("<p>You have scheduled an event named " + this.evtTitle);
+            document.write(" that will occur on " + this.evtdate + " and allow up to " + this.maxattendees + " attendees. ");
+            document.write("The event is coordinated by " + this.coordinator + " who can be reached at " + this.phonenum);
+            document.write(" or by email at " + this.email + ". ");
+            document.write("More information about the event is available at <a href='" + this.infoURL + "'> " + this.infoURL + "</a></p>");
+        }
+
+        function Validate() {
+            with (document.evtForm) {
+                evt = new ScheduledEvent(evtDate.value, evtTitle.value, maxattendees.value, evtCoordinator.value, phonenum.value, email.value, infoURL.value);
+            }
+            if (evtdate.length < 1) {
+                alert("You must enter a date.");
+                return false
+            }
+            if (evtTitle.length < 1) {
+                alert("You must enter a title.")
+            }
+            if (evtCoordinator.length < 5) {
+                alert("The Coordinator name must be at least 5 characters long.")
+            }
+            if (!IsNumeric(maxattendees)) {
+                alert("The maximum number of attendees must be a number");
+                return false;
+            }
+            if (!IsEmail(email)) {
+                alert("This must be a valid email address at least 6 characters long.")
+                return false
+            }
+            if (!IsURL(infoURL)) {
+                alert('URL must be at least 12 characters long and have "://" in it.')
+                return false
+            }
+            with (evt) {
+                evt.PrintEvent();
+            }
+            return true;
+        }
+
+        function IsNumeric(sNumber) {
+            var numberChars = "0123456789";
+            var IsNumber = true;
+            var currentChar;
+            for (i = 0; i < sNumber.length && IsNumber == true; i++) {
+                currentChar = sNumber.charAt(i);
+                if (numberChars.indexOf(Char) == -1) {
+                    IsNumber = false;
+                }
+            }
+            return IsNumber;
+        }
+
+        function IsEmail(sEmail) {
+            if ((sEmail.length < 6) || (sEmail.indexOf("@", 0) == -1))
+                return false;
+            else
+                return true;
+        }
+
+        function IsURL(sURL) {
+            if ((sURL.length < 12) || (sURL.indexOf("://", 0) == -1))
+                return false;
+            else
+                return true;
+        }
+    </script>
+</head>
+<body>
+<form name="evtForm" method="post" onclick="Validate()">
+    <table>
+        <tr>
+            <td>
+                Event Date:
+            </td>
+            <td><input type=date id="evtDate" title="evtDate"/></td>
+        </tr>
+        <tr>
+            <td>Title:</td>
+            <td><input id="evtTitle" title="evtTitle"/></td>
+        </tr>
+        <tr>
+            <td>Maximum attendees:</td>
+            <td><input type=number id="maxattendees" title="maxattendees"/></td>
+        </tr>
+        <tr>
+            <td>Event Coordinator:</td>
+            <td><input id="evtCoordinator" title="evtCoordinator"/></td>
+        </tr>
+        <tr>
+            <td>Phone number (numbers only):</td>
+            <td><input type=tel id="phonenum" title="phonenum"/></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type=email id="email" title="email"/></td>
+        </tr>
+        <tr>
+            <td>More info:</td>
+            <td><input type=url id="infoURL" title="infoURL"/></td>
+        </tr>
+    </table>
+    <input type=submit value="Submit"/></form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click Mouse Event</title>
+    <script type="application/javascript">
+        function clickMeEvent(obj) {
+            if (obj.innerHTML == "Click Me<br>Thank You<br>Goodbye") {
+                obj.style.display = "none";
+            } else if (obj.innerHTML == "Click Me<br>Thank You") {
+                obj.innerHTML = "Click Me<br>Thank You<br>Goodbye";
+            } else if (obj.innerHTML == "Click Me") {
+                obj.innerHTML = "Click Me<br>Thank You";
+            }
+        }
+    </script>
+</head>
+<body>
+<div style="width: 100%; height: 140px;">
+    <div style="background-color: red; width:170px; height: 80px; margin: 20px; padding-top: 20px; color: white; font-weight: bold; font-size: 18px; float: left; text-align: center;"
+         onclick="clickMeEvent(this)">Click Me</div>
+</div>
+</body>
+</html>

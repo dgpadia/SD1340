@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DPad's Character Creator</title>
+    <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+    <script src="../js/jquery-1.12.3.min.js"></script>
+    <script src=../js/main.js></script>
+</head>
+<body>
+<header></header>
+<nav></nav>
+<article>
+    <section>
+        <h1>GM/Player Tools</h1>
+        <p>This section will include tools for the GM and players, mainly dice rollers and randomizers. I'll later incorporate themes and ideas in randomizers, along with character types, event types, etc.</p>
+        <p>There will be a Character Creator and Manager, which will include all the abilities, talents, advantages and disadvantages you expect in any GURPS setting. It will include room for</p>
+        <h2>Resources</h2>
+        <p>I'll keep libraries on free content here, searchable, in wikia format (hopefully).</p>
+        <p>I'll also seek licenses to sell the books. This will incorporate a unique model a buddy of mine came up with, where purchasing the book through this will include the pdf format in it's original glory as a download, access to the materials in the wikia format, and incorporation into Character/Inventory/Event Management.</p>
+        <p>For example, You can create a basic character and select abilities and talents from the free "GURPS Lite Fourth Edition" document. Get the Basic Set, and the expanded list of talents, magical abilities, advantages, etc. will be available in the selection menu's while creating or updating a character.</p>
+        <p>All that being said, and this is the beauty of GURPS, I'd want to incorporate an "Add Advantage/Talent/Magic/Etc." into the programming that would allow GM's to add their house abilities, since GURPS uses logical mathematics for creating your own abilities.</p>
+    </section>
+    <section>
+        <h3>Please excuse the mess!!!</h3>
+        <p>This project is still very much in alpha form. There is only page content here, no programming to get the calculators and such going. A time-line below </p>
+        <h4>Plan Time-line</h4>
+        <ul class="leftSide">
+            <li>Finish Layout and HTML Content.
+                <ul>
+                    <li>Enhance Home and registration page by creating and linking CSS style sheets that format the pages for screen sizes less than 320 pixels wide and screen sizes between 320 and 480 pixels wide</li>
+                    <li>Import jQuery Mobile, add at least two jQuery Mobile buttons</li>
+                </ul>
+            </li>
+            <li>Start building javascript for forms and character manager.</li>
+            <li>Decide if programming in Javascript or Python, probably Javascript.</li>
+        </ul>
+    </section>
+    <section>
+        <canvas id="purpose" width="175" height="30"></canvas>
+        <p>This site seeks to be a catch-all for your tabletop RPG needs. Character Manager, Event Manager, Dice Rollers, Resources, etc. This will be focusing in GURPS<sup>&copy;</sup> and expanding from there.<br/><br/>With these tools, you can enrich your next gaming experience, whether you are player or GM, and have a tool to store your characters, items, events, etc. I also will seek licensing to sell the books and incorporate them into the character editor and such. </p>
+    </section>
+</article>
+<footer></footer>
+<script>
+    var canvas = document.getElementById("purpose");
+    var ctx = canvas.getContext("2d");
+    var grd = ctx.createLinearGradient(0,0,200,0);
+    grd.addColorStop(0, "#DB1045");
+    grd.addColorStop(1, "#3E5C42");
+    ctx.font = "30px Lucida Console";
+    ctx.fillStyle = grd;
+    ctx.textAlign = "center";
+    ctx.fillText("Purpose", canvas.width/2, 25);
+</script>
+</body>
+</html>

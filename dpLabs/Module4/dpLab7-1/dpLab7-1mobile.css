@@ -1,0 +1,22 @@
+#Wrapper {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#Ranking {
+    background-color: lightgray;
+    height: 200px;
+    width: 100%;
+    positioning: absolute;
+    top: 10%;
+    left: 0;
+}
+
+#Explain {
+    height: 300px;
+    width: 100%;
+    positioning: absolute;
+    top: 210px;
+    left: 0;
+}
+

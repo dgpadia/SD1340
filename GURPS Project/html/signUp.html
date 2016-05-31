@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+    <script src="../js/jquery-1.12.3.min.js"></script>
+    <script src=../js/main.js></script>
+    <script>
+        window.onload = function () {
+            document.getElementById('usrName').focus()
+        }
+
+    </script>
+</head>
+<body>
+<header></header>
+<nav></nav>
+<article>
+    <section>
+        <form name="Registration" onsubmit="return validateForm()" onreset="resetForm()"
+              method="post">
+            <fieldset>
+                <table id="registration">
+                    <thead>
+                    <tr>
+                        <th colspan="2">
+                            Pretend Register here by filling in the boxes below.
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Username: <img class="helpIcon" onmouseover="helpIcon('usernameHelp')" onmouseout="offIcon('usernameHelp')" border="0" src="../img/question.svg">
+                            <div class="helpText" id="usernameHelp" style="display: none;">Your Username, not case sensitive.</div></td>
+                        <td><input id="usrName" title="Username" type="text"><br/></td>
+                    </tr>
+                    <tr>
+                        <td>Password: <img class="helpIcon" onmouseover="helpIcon('passwordHelp')" onmouseout="offIcon('passwordHelp')" border="0" src="../img/question.svg">
+                            <div class="helpText" id="passwordHelp" style="display: none;">Your Password must be 8 characters long and alphanumeric.</div></td>
+                        <td><input id="password" title="Password" type="password" onclick="alert('Must be 8 alphanumeric characters')"><br/></td>
+                    </tr>
+                    <tr>
+                        <td>Email: <img class="helpIcon" onmouseover="helpIcon('emailHelp')" onmouseout="offIcon('emailHelp')" border="0" src="../img/question.svg">
+                            <div class="helpText" id="emailHelp" style="display: none;">I'll know if it's not a real email!! ...Not really...</div></td>
+                        <td><input id="mail" title="Email" type="email" onclick="alert('Must be an email')"><br/></td>
+                    </tr>
+                    <tr>
+                        <td>Display contact information to the public? <img class="helpIcon" onmouseover="helpIcon('displayHelp')" onmouseout="offIcon('displayHelp')" border="0" src="../img/question.svg">
+                            <div class="helpText" id="displayHelp" style="display: none;">Your information will only display on the next page, regardless of this, don't worry. </div></td>
+                        <td><input class="radio" name="contactInfo" title="Yes" type="radio" value="Yes">Yes<br/>
+                            <input class="radio" name="contactInfo" title="No" type="radio" value="No">No<br/></td>
+                    </tr>
+                    <tr>
+                        <td>Would you like to receive updates? <img class="helpIcon" onmouseover="helpIcon('updatesHelp')" onmouseout="offIcon('updatesHelp')" border="0" src="../img/question.svg">
+                            <div class="helpText" id="updatesHelp" style="display: none;">There won't be any updates, don't worry.</div></td>
+                        <td><input class="radio" name="updates" title="Yes" type="radio" value="Yes">Yes<br/>
+                            <input class="radio" name="updates" title="No" type="radio" value="No">No<br/></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">Brief Description: <img class="helpIcon" onmouseover="helpIcon('descriptionHelp')" onmouseout="offIcon('descriptionHelp')" border="0" src="../img/question.svg">
+                            <div class="helpText" id="descriptionHelp" style="display: none;">But in what you like. It's your description, who cares!!!</div></td>
+                        <td><textarea title="Description"></textarea><br/></td>
+                    </tr>
+                    <tr>
+                        <td>Validate age: <img class="helpIcon" onmouseover="helpIcon('ageHelp')" onmouseout="offIcon('ageHelp')" border="0" src="../img/question.svg">
+                            <div class="helpText" id="ageHelp" style="display: none;">You must be between 14 and 110 years old.</div></td>
+                        <td><input id="age" name="age" title="age" type="date"><br/></td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td><input class="button" id="reset" type="reset" value="Reset Form"></td>
+                        <td><input class="button" id="submit" type="submit" value="Submit"></td>
+                    </tr>
+                    <tr>
+                        <td>Don't forget the silly requirements... <img class="helpIcon" onmouseover="helpIcon('reqHelp')" onmouseout="offIcon('reqHelp')" border="0" src="../img/question.svg">
+                            <div class="helpText" id="reqHelp" style="display: none;">Why??? Because it's required for my class, get over it!!.</div></td>
+                        <td><button type="button" onclick="stupidColorChange('red')">RED!!!!</button>
+                            <button type="button" onclick="stupidColorChange('blue')">BLUE!!!</button>
+                            <button type="button" onclick="stupidColorChange('#1E261F')">It's stupid right? Reset it here.</button></td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </fieldset>
+        </form>
+    </section>
+    <div id="receiver"></div>
+</article>
+<footer></footer>
+</body>
+</html>

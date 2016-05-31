@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#header {
+    float: left;
+    width: 100%;
+    background-color: cyan;
+}
+#footer {
+    float: left;
+    width: 100%;
+    background-color: cyan;
+    position: relative;
+}
+#wrapper {
+    float: left;
+    padding-left: 200px;
+    padding-right: 200px;
+    overflow: hidden;
+}
+#leftbar {
+    position: relative;
+    float: left;
+    width: 200px;
+    background-color: yellow;
+    right: 200px;
+    margin-right: -100%;
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
+}
+#rightbar {
+    position: relative;
+    float: left;
+    width: 200px;
+    background-color: red;
+    margin-right: -200px;
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
+}
+#content {
+    position: relative;
+    float: left;
+    background-color: tan;
+    width: 100%;
+    margin-bottom: -2000px;
+    padding-bottom: 2000px;
+}

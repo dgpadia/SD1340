@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Review Page</title>
+    <link href="dpLab7-1.css" rel="stylesheet" type="text/css"/>
+    <link href="dpLab7-1mobile.css" rel="stylesheet" type="text/css" media="only screen and (min-width:320px) and (max-width:480px)"/>
+    <script>
+        (function() {
+            document.createElement("section");
+        })();
+    </script>
+</head>
+<body>
+<form>
+    <section id="Instructions">
+        <h1>Thank you for sharing your input</h1>
+        <p>Please use this form to tell us what you think. Rate each feature on a scale of 1 to 5.</p>
+    </section>
+    <section id="Wrapper">
+        <section id="Ranking">
+            <h4>Easy to use</h4>
+            <input title="usabilitySlider" id="usabilitySlider" type="range" min=1 max=5/>
+            <h4>Works as you expect</h4>
+            <input title="worksSlider" id="worksSlider" type="range" min=1 max=5/>
+        </section>
+        <section id="Explain">
+            <h2>Tell us more</h2>
+            <p>We'd appreciate more feedback about the product.</p>
+            <textarea title="moreInfo" id="moreInfo" rows="7"></textarea>
+            <input type="submit" name="submit" value="Submit"/>
+            <p>Call us at <a href="tel:5551212">555-1212</a></p>
+        </section>
+    </section>
+</form>
+</body>
+</html>
